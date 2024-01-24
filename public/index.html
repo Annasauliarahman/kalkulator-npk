@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kalkulator NPK MIX</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="./css/style.css">
+    
+  </head>
+  <body >
+    <div class="bg-gradient-to-r from-lime-700 to-lime-950 text-white w-full  md:h-5 h-7 flex justify-between items-center px-5">
+      <p class="font-extrabold">. . .</p>
+      <p class="font-extrabold">. . .</p>
+    </div>
+
+   <div class="bg-gradient-to-r from-lime-700 to-lime-950 w-full py-5 px-8 md:px-48 md:pb-8">
+      <h2 class="text-yellow-600 tracking-widest font-extrabold text-xl text-center">Hitung Pupuk</h1>
+      <h1 class="text-yellow-50 pt-8 text-3xl font-light md:text-5xl text-center mb-10 md:pb-10">Calculator NPK Pupuk</h2>
+        
+      <p class="text-yellow-50 text-justify md:text-center  font-light">Kalkulator NPK pupuk adalah alat modern yang membantu petani menghitung dan menentukan rasio optimal Nitrogen, Fosfor, dan Kalium dalam pupuk. Dengan penggunaan alat ini, petani dapat meningkatkan efisiensi pemupukan, memastikan nutrisi tanaman sesuai kebutuhan, dan mendukung pertanian berkelanjutan.</p>
+    </div>
+
+    <form class=" md:2-[1100px] w-full bg-gradient-to-r from-lime-700 to-lime-950 px-5 pb-16"  
+    action="#" method="post">
+
+    <div class="flex flex-col gap-3 md:w-[820px] w-full mx-auto">
+      <h1 class="text-yellow-600 tracking-wide font-bold text-md" >Pupuk Majemuk</h1>
+      <!-- baris 1 -->
+      <div class="flex justify-between gap-3 md:gap-0 md:flex-row flex-col">
+        <div class="bg-slate-100 flex justify-between px-2 items-center  h-[55px] md:w-[400px] w-full rounded-md">
+          <label for="jumlah_pohon">Jumlah Pohon</label>
+          <input class="w-[150px] md:w-[200px] h-full rounded-md" type="number"
+                  id="jumlah_pohon"
+                  name="jumlah_pohon"
+                  placeholder="Jumlah Pupuk" value="0"/>
+        </div>
+
+        <div class=" bg-slate-100 flex justify-between px-2 items-center  h-[55px] md:w-[400px] w-full  rounded-md">
+          <label for="dosis">Dosis Pertanaman</label>
+          <input class="w-[150px] md:w-[200px] h-full rounded-md" type="number"
+                  id="dosis"
+                  name="dosis" value="0"
+                  placeholder="/gram"/>
+        </div>
+    </div>
+<!-- baris dua -->
+    <div class="flex md:justify-between gap-3 md:gap-0 flex-col md:flex-row">
+      <div class="bg-slate-100 flex justify-between px-2 items-center  h-[55px]   md:w-[400px] w-full   rounded-md">
+        <label for="merkpupuk1">Merk Pupuk</label>
+            <input class="w-[150px] md:w-[200px] h-full rounded-md" type="text"
+                    id="merkpupuk1"
+                    name="merkpupuk1" required
+                    placeholder="Merk Pupuk"/>
+        </div>
+      <div class="  bg-slate-100 flex justify-between px-2 items-center  h-[55px]   md:w-[400px]  w-full rounded-md">
+        <label for="harga/kg1">Harga/kg</label>
+            <input class="w-[150px] md:w-[200px] h-full rounded-md" type="number"
+                    id="harga/kg1"
+                    name="harga/kg1"required
+                    placeholder="/kg"/>
+      </div>
+    </div>
+
+    <!-- baris ketiga -->
+    <div class="flex justify-between">
+      <div class="bg-slate-100 md:w-[260px] w-[95px] h-[80px]  flex flex-col items-center justify-around rounded-md">
+        <label class="md:block hidden" for="nitrogen1">Nitrogen</label>
+        <label class="md:hidden block" for="nitrogen1">N</label>
+        <input class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md" type="number"
+                id="nitrogen1"
+                name="nitrogen1"required
+                placeholder="nitrogen"/>
+      </div>
+      <div class="bg-slate-100 md:w-[260px] w-[95px] h-[80px]   flex flex-col items-center justify-around rounded-md">
+        <label class="md:block hidden" for="phospor1">Phospor</label>
+        <label class="md:hidden block" for="phospor1">P</label>
+        <input class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md" type="number"
+                id="phospor1"
+                name="phospor1"required
+                placeholder="phospor"/>
+      </div>
+      <div class="bg-slate-100 md:w-[260px] w-[95px] h-[80px]   flex flex-col items-center justify-around rounded-md">
+        <label class="md:block hidden" for="phospor1">Kalium</label>
+        <label class="md:hidden block" for="phospor1">K</label>
+        <input class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md" type="number"
+                id="kalium1"
+                name="kalium1"required
+                placeholder="kalium"/>
+      </div>
+    </div>
+
+    </div>
+
+<div class="mt-8 flex flex-col gap-3 md:w-[820px] w-full mx-auto">
+  <h1 class="text-yellow-600 tracking-wide font-bold text-md mb-5">Pupuk Tunggal</h1>
+
+  <div class="flex items-center gap-2">
+    <span class="w-2 h-2 bg-yellow-50 rounded-full inline-block"></span>
+    <h2 class="text-yellow-50 text-sm font-medium"> Nitrogen</h2>
+  </div>
+
+    <div class="md:gap-0 gap-2 flex justify-between flex-col md:flex-row">
+      <div class="bg-slate-100 md:w-[260px] w-full h-[80px]   flex flex-col items-center justify-around rounded-md">
+        <label for="merkpupuk2">Merk Pupuk</label>
+            <input   class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md"
+                    type="text"
+                    id="merkpupuk2"
+                    name="merkpupuk2"required
+                    placeholder="N"/>
+      </div>
+      <div class="bg-slate-100 md:w-[260px] w-full h-[80px]   flex flex-col items-center justify-around rounded-md">
+        <label for="harga/kg2">Harga/kg</label>
+        <input  class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md" type="number"
+                id="harga/kg2"
+                name="harga/kg2"required
+                placeholder="/kg"/>
+      </div>
+      <div class="bg-slate-100 md:w-[260px] w-full h-[80px]   flex flex-col items-center justify-around rounded-md">
+        <label for="nitrogen1">Nitrogen</label>
+        
+        <input  class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md" type="number"
+                id="nitrogen2"
+                name="nitrogen2"required
+                placeholder="nitrogen"/>
+      </div>
+    </div>
+    
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 bg-yellow-50 rounded-full inline-block"></span>
+      <h2 class="text-yellow-50 text-sm font-medium"> Phospor</h2>
+    </div>
+
+    <div class="md:gap-0 gap-2 flex justify-between flex-col md:flex-row">
+      <div class="bg-slate-100 md:w-[260px] w-full h-[80px]   flex flex-col items-center justify-around rounded-md">
+        <label for="merkpupuk2">Merk Pupuk</label>
+            <input   class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md"
+            type="text"
+            id="merkpupukP"
+            name="merkpupukP"required
+            placeholder="P"/>
+      </div>
+      <div class="bg-slate-100 md:w-[260px] w-full h-[80px]   flex flex-col items-center justify-around rounded-md">
+        <label for="harga/kgP">Harga/kg</label>
+            <input class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md" type="number"
+                    id="harga/kgP"
+                    name="harga/kgP"required
+                    placeholder="/kg"/>
+      </div>
+      <div class="bg-slate-100 md:w-[260px] w-full h-[80px]   flex flex-col items-center justify-around rounded-md">
+        <label  for="phospor2">Phospor</label>
+       
+        
+        <input class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md" type="number" type="number"
+                    id="phospor2"
+                    name="phospor2"required
+                    placeholder="phospor"/>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 bg-yellow-50 rounded-full inline-block"></span>
+      <h2 class="text-yellow-50 text-sm font-medium"> Kalium</h2>
+    </div>
+
+    <div class="md:gap-0 gap-2 flex justify-between flex-col md:flex-row">
+      <div class="bg-slate-100 md:w-[260px] w-full h-[80px]   flex flex-col items-center justify-around rounded-md">
+        <label for="merkpupukK">Merk Pupuk</label>
+            <input class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md" type="text"
+                    id="merkpupukK"
+                    name="merkpupukK"required
+                    placeholder="Merk Pupuk"/>
+      </div>
+      <div class="bg-slate-100 md:w-[260px] w-full h-[80px]   flex flex-col items-center justify-around rounded-md">
+        <label for="harga/kgK">Harga/kg</label>
+            <input class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md" type="number"
+                    id="harga/kgK"
+                    name="harga/kgK"required
+                    placeholder="/kg"/>
+      </div>
+      <div class="bg-slate-100 md:w-[260px] w-full h-[80px]   flex flex-col items-center justify-around rounded-md">
+        
+        <label for="kalium2">Kalium</label>
+       
+            <input  class="md:px-20 px-2 md:w-full w-[80%] h-1/2 rounded-md" type="number"
+                    id="kalium2"
+                    name="kalium2"required
+                    placeholder="kalium"/>
+      </div>
+    </div>
+    
+    <div class="w-full bg-yellow-50 py-5 mt-5 rounded-md shadow-xl outline outline-offset-2 outline-yellow-500">
+      <b> <center><input type="submit" name="submit" value="Hitung"></center></b>
+     </div>
+
+  </div>  
+
+  
+      
+    </form>
+
+    <div class="w-full bg-lime-50 h-10 flex items-center justify-between p-5 md:p-10">
+      <h1 class="tracking-widest">Unwahas</h1>
+      <h1 class="tracking-widest">Semarang</h1>
+    </div>
+
+  </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
